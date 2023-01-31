@@ -1,0 +1,50 @@
+.App{
+  background-color: red;
+  height: 1000px;
+}
+
+.content {
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+justify-content: flex-start;
+background-color: blue;
+ 
+}
+
+.box {
+  width: 250px;
+  height: 200px;
+ padding: 10px;
+}
+
+
+.display {
+  background-color:darkgray;
+  border: 1px solid black;
+  padding-left: 400px;
+  padding-right: 400px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  margin-top: 60px;
+}
+
+img {
+  height: 220px;
+  width: 220px;
+  border: 5px solid white;
+}
+
+.Pictures {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  border: 1px solid lightgrey;
+  padding: 34px;
+  background-color: beige;
+  height: 200px;
+}
+
+
