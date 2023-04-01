@@ -1,57 +1,32 @@
-.App {
-  background-color: red;
-  height: 1030px;
+h1, p {
+display: flex;
+justify-content: center;
 }
 
-.content {
-  height: 1040px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
+.grid {
   background-color: white;
+ display: grid;
+ grid-template:300px 300px/1fr 1fr 1fr;
+
 }
 
-.box {
-  width: 250px;
-  height: 200px;
-  padding: 10px;
-  position: relative;
-  text-align: center;
-  color: white;
+.display img {
+  height: 300px;
+  width: 800px;
+ 
 }
 
 .display {
-  background-color: darkgray;
-  border: 1px solid black;
-  padding-right: 400px;
-  padding-bottom: 80px;
-  margin-top: 60px;
-height: 400px;
-width: 500px;
-  position: relative;
-}
-
-img {
-  height: 220px;
-  width: 220px;
-  border: 5px solid white;
-}
-
-.image-container:hover {
-  webkit-filter: blur(4px); /* Chrome, Safari, Opera */
-  filter: blur(4px);
-}
-
-.Pictures {
+  grid-column-start: 1;
+  grid-column-end: span 3;
   display: flex;
   justify-content: center;
+}
 
-  align-items: center;
-  border: 1px solid lightgrey;
-  padding: 34px;
-  background-color: white;
-  height: 200px;
+
+.blur img {
+ width: 350px;
+ height: 250px;
 }
 
 .image-container {
@@ -60,23 +35,80 @@ img {
   color: white;
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-  color: red;
-}
-
-.weather {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.center:hover {
+  opacity: 1;
 }
 
 footer {
- background-color: white;
- height: 50px;
- border: 1px solid black;
+  background-color: white;
+  height: 50px;
+  color: rgb(51, 51, 51);
 }
+
+footer p {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.blur {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.blur img {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.blur span {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.blur:hover img {
+  -webkit-filter: blur(5px);
+}
+
+.blur span {
+  opacity: 0;
+  color: white;
+ 
+}
+
+.blur:hover span {
+  opacity: 1;
+}
+
+.words {
+  position: absolute;
+  top: 125px;
+}
+
+.search {
+  text-align: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+input {
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.2);
+}
+
+.weather p {
+ 
+}
+
+
+
