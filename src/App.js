@@ -1,10 +1,12 @@
-import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 
 function App() {
   const title = "Weather App";
-  const subtitle = "Type of name of a city to get its temperature, humidity, and wind speed.";
+  const [show,setShow] = useState(true);
+
+  const subtitle =
+    "Type of name of a city to get its temperature, humidity, and wind speed.";
 
   const [data, setData] = useState();
   const [location, setLocation] = useState("");
@@ -34,27 +36,25 @@ function App() {
           type="text"
         />
       </div>
-   
-          
-          <div className="words">
-          </div>
-          
-          <div className="words">
-        
-        </div>
-        {data && (
-          <div className="display">
-            <div className="weather">
-              <p className="city">{data.name}    {data.main.temp}°F</p>
-              <div className="weatherData">
+
+      <div className="words"></div>
+
+      <div className="words"></div>
+      {data && (
+        <div className="display">
+          <div className="weather">
+            <p className="city">
+              {data.name} {data.main.temp}°F
+            </p>
+            <div className="weatherData">
               <p>{data.main.feels_like} °F</p>
               <p>{data.main.humidity}%</p>
               <p>{data.wind.speed}mph</p>
-              </div>
-            </div>
+            </div>           
           </div>
-        )}
-     
+        </div>
+      )}
+
       <footer>
         <p>Jesse Leach 2023</p>
       </footer>
